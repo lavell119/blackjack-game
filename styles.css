@@ -31,6 +31,10 @@ body {
     position: relative;
 }
 
+.seat.active {
+    border: 2px solid blue;
+}
+
 .hand {
     display: flex;
 }
@@ -49,16 +53,21 @@ body {
 .player-name {
     position: absolute;
     color: white;
-    top: 20px;   
+    top: 15px;   
 }
 
+.chip-count {
+    position: absolute;
+    color: white;
+    bottom: 15px; 
+}
 .card {
     height: 100px;
-    background-color: blue;
+    background-color: white;
     border: 1px solid silver;
     border-radius: 3px;
     width: 60px;
     height: 85px;
-    margin: -19px;
+    margin: -22px;
     background-size: contain;
 }
