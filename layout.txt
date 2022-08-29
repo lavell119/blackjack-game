@@ -1,0 +1,11 @@
+start game
+takeBets
+player1 turn
+player2 turn
+player3 turn
+player4 turn
+calculate winner
+send winnings
+new game
+
+

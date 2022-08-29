@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(39, 39, 39);
+    height: 100vh;
+}
+
+.table-grid {
+    height: 500px;
+    width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.seat {
+    border: 2px solid grey;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    position: relative;
+}
+
+.hand {
+    display: flex;
+}
+
+.player {
+    height: 151px;
+    width: 151px;
+    background-color: black;
+    border-radius: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.player-name {
+    position: absolute;
+    color: white;
+    top: 20px;   
+}
+
+.card {
+    height: 100px;
+    background-color: blue;
+    border: 1px solid silver;
+    border-radius: 3px;
+    width: 60px;
+    height: 85px;
+    margin: -19px;
+    background-size: contain;
+}
