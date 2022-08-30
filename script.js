@@ -25,7 +25,6 @@ let startGame=()=>{
 seat[0].classList.add('active')
 }
   
-startGame()
 
 testButton.addEventListener('click', ()=>{
     nextTurn()
