@@ -112,3 +112,23 @@ body {
 .hide {
     display: none;
 }
+
+.score {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    right: 5px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-weight: 900;
+    color: white;
+}
+
+.winner {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: yellow;
+}
