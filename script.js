@@ -10,7 +10,22 @@ let scoreElement= document.querySelectorAll('.score')
 let winner= document.querySelector('.winner')
 let score=0
 
+class Player {
+    constructor(name, score) {
+        this.score = score;
+        this.name = name;
+    }
+}
 
+let player1= new Player("Player1", 0)
+let player2= new Player("Player2", 0)
+let player3= new Player("Player3", 0)
+let player4= new Player("Player4", 0)
+
+player1.score=20
+player2.score=17
+player3.score=19
+player4.score=14
 
 fetch("./deck.json")
 .then(response=>{
@@ -67,16 +82,39 @@ let nextTurn =()=>{
 }
 
  let checkWinner=()=>{
-    let player1Score=scoreElement[0].innerText
-    let player2Score=scoreElement[1].innerText
-    let player3Score=scoreElement[2].innerText
-    let player4Score=scoreElement[3].innerText
-    let highScore = Math.max(player1Score, player2Score, player3Score, player4Score)
+    player1.score=scoreElement[0].innerText
+    player2.score=scoreElement[1].innerText
+    player3.score=scoreElement[2].innerText
+    player4.score=scoreElement[3].innerText
+    console.log(player3.score)
+    testArr.forEach(player=>{
+        if (player.score>22)
+        testArr.pop(player)
+        console.log(testArr)
+     })
+
 
  }
 let randomNum=(Math.floor(Math.random()*5))
  let displayWinner=()=>{
     winner.innerText=`Winner is Player ${randomNum}`
+    checkWinner()
  }
 
  console.log(Math.floor(Math.random()*5))
+
+ /*let calculateWinner=(score1, score2, score3, score4)=>{
+    let scores=[score1, score2, score3, score4]
+    scores.forEach(score=>{
+        if (score>21){
+            scores.pop()
+        })
+ }*/
+
+let testArr=[player1, player2, player3, player4]
+
+ testArr.forEach(player=>{
+    if (player.score>22)
+    testArr.pop(player)
+    console.log(testArr)
+ })

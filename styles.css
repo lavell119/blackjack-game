@@ -133,6 +133,13 @@ body {
     height: 30px;
     width: 200px;
     background-color: yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: auto;
     text-align: center;
+}
+
+.hide {
+    display: none;
 }
