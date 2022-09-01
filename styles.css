@@ -16,6 +16,8 @@ body {
     height: 500px;
     width: 500px;
     display: grid;
+    justify-items: center;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
     gap: 50px;
 }
@@ -128,7 +130,9 @@ body {
 
 .winner {
     position: absolute;
-    height: 50px;
-    width: 50px;
+    height: 30px;
+    width: 200px;
     background-color: yellow;
+    margin: auto;
+    text-align: center;
 }
