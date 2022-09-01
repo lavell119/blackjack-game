@@ -56,6 +56,7 @@ let i =0
 let nextTurn =()=>{
     if (i===3) {
         winner.classList.remove('hide')
+        displayWinner()
     } else {
     seat[i].classList.remove('active')
     seat[i+1].classList.add('active')
@@ -65,4 +66,17 @@ let nextTurn =()=>{
     }
 }
 
+ let checkWinner=()=>{
+    let player1Score=scoreElement[0].innerText
+    let player2Score=scoreElement[1].innerText
+    let player3Score=scoreElement[2].innerText
+    let player4Score=scoreElement[3].innerText
+    let highScore = Math.max(player1Score, player2Score, player3Score, player4Score)
 
+ }
+let randomNum=(Math.floor(Math.random()*5))
+ let displayWinner=()=>{
+    winner.innerText=`Winner is Player ${randomNum}`
+ }
+
+ console.log(Math.floor(Math.random()*5))
