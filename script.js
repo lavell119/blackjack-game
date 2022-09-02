@@ -11,16 +11,17 @@ let winner= document.querySelector('.winner')
 let score=0
 
 class Player {
-    constructor(name, score) {
+    constructor(name, score, position) {
         this.score = score;
         this.name = name;
+        this.position = position;
     }
 }
 
-let player1= new Player("Player1", 0)
-let player2= new Player("Player2", 0)
-let player3= new Player("Player3", 0)
-let player4= new Player("Player4", 0)
+let player1= new Player("Player1", 0, 0)
+let player2= new Player("Player2", 0, 1)
+let player3= new Player("Player3", 0, 2)
+let player4= new Player("Player4", 0, 3)
 
 player1.score=20
 player2.score=17
