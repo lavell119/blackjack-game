@@ -62,6 +62,7 @@ hitButton.forEach (button=> {
     plyr.score=score
     console.log(plyr.score)
     console.log(plyr)
+    console.log(score)
     })
 }
     )
