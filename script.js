@@ -23,6 +23,8 @@ let player2= new Player("Player2", 0, 1)
 let player3= new Player("Player3", 0, 2)
 let player4= new Player("Player4", 0, 3)
 
+let players=[player1, player1, player3, player4]
+
 player1.score=20
 player2.score=17
 player3.score=19
@@ -44,7 +46,6 @@ let startGame=()=>{
 )
 seat[0].classList.add('active')
 }
-
 hitButton.forEach (button=> {
     let score =0
     button.addEventListener('click', ()=>{
@@ -57,6 +58,10 @@ hitButton.forEach (button=> {
     newCard.style.backgroundImage="url('deck-images/"+drawnCard.image+".png')"
     hand[i].appendChild(newCard)
     scoreElement[i].innerText=score
+    let plyr=players[i]
+    plyr.score=score
+    console.log(plyr.score)
+    console.log(plyr)
     })
 }
     )
@@ -89,10 +94,10 @@ let nextTurn =()=>{
     player4.score=scoreElement[3].innerText
     console.log(player3.score)
     testArr.forEach(player=>{
-        if (player.score>22)
+        if (player.score>21)
         testArr.pop(player)
-        console.log(testArr)
      })
+     console.log(testArr)
 
 
  }
@@ -111,11 +116,26 @@ let randomNum=(Math.floor(Math.random()*5))
             scores.pop()
         })
  }*/
-
+player1.score=19
+player2.score=22
+player3.score=11
+player4.score=22
 let testArr=[player1, player2, player3, player4]
 
  testArr.forEach(player=>{
-    if (player.score>22)
-    testArr.pop(player)
-    console.log(testArr)
+    let v = player.position
+    if (player.score>21){
+    testArr.splice(0, 3)
+ }
+    
  })
+
+ console.log(testArr)    
+ let map=testArr.map((player)=>{
+    return player.score
+ })
+
+ console.log(map)
+
+console.log(Math.max(map))
+
