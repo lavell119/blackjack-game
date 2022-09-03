@@ -1,4 +1,4 @@
-let startGame=()=>{
+export function startGame() {
     player.forEach(player=()=>{
         score=0
         console.log(score)

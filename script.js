@@ -9,6 +9,7 @@ let hitButton=document.querySelectorAll('.hit-btn')
 let scoreElement= document.querySelectorAll('.score')
 let winner= document.querySelector('.winner')
 let score=0
+let winnerPlayer=''
 
 class Player {
     constructor(name, score, position) {
@@ -23,7 +24,7 @@ let player2= new Player("Player2", 0, 1)
 let player3= new Player("Player3", 0, 2)
 let player4= new Player("Player4", 0, 3)
 
-let players=[player1, player1, player3, player4]
+let players=[player1, player2, player3, player4]
 
 player1.score=20
 player2.score=17
@@ -37,7 +38,6 @@ fetch("./deck.json")
 .then(data=>deck=data)
 .then(deck=>console.log(deck))   
 
-
 let startGame=()=>{
     player.forEach(player=()=>{
         score=0
@@ -46,6 +46,7 @@ let startGame=()=>{
 )
 seat[0].classList.add('active')
 }
+
 hitButton.forEach (button=> {
     let score =0
     button.addEventListener('click', ()=>{
@@ -89,6 +90,17 @@ let nextTurn =()=>{
 }
 
  let checkWinner=()=>{
+    players.map(player=>{
+        if (player.bust===true){
+            return
+        }   else {
+
+        }
+    }
+ )}
+
+
+    /*
     player1.score=scoreElement[0].innerText
     player2.score=scoreElement[1].innerText
     player3.score=scoreElement[2].innerText
@@ -99,13 +111,15 @@ let nextTurn =()=>{
         testArr.pop(player)
      })
      console.log(testArr)
+     */
 
 
- }
+ 
 let randomNum=(Math.floor(Math.random()*5))
  let displayWinner=()=>{
     winner.innerText=`Winner is Player ${randomNum}`
     checkWinner()
+    getWinner()
  }
 
  console.log(Math.floor(Math.random()*5))
@@ -120,7 +134,7 @@ let randomNum=(Math.floor(Math.random()*5))
 player1.score=19
 player2.score=22
 player3.score=11
-player4.score=22
+player4.score=27
 let testArr=[player1, player2, player3, player4]
 
  testArr.forEach(player=>{
@@ -140,3 +154,12 @@ let testArr=[player1, player2, player3, player4]
 
 console.log(Math.max(map))
 
+let getWinner=(num)=>{
+    players.forEach(player=>{
+        if (player.score===num){
+            console.log(player.name)
+        }
+    })
+}
+
+getWinner(20)
