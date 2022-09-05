@@ -84,6 +84,7 @@ let nextTurn =()=>{
     if (i===3) {
         winner.classList.remove('hide')
         displayWinner()
+        getWinningScore1(players)
     } else {
     seat[i].classList.remove('active')
     seat[i+1].classList.add('active')
@@ -170,6 +171,25 @@ getWinner(20)
 
 let bust = (i)=>{
     hitButton[i].classList.add('hide')
-    players[i].bust=true
+    players[i].bust='true'
     console.log(players[i])
+}
+
+let getWinningScore= (arr) =>{
+    let under21Scores= arr.map(player=>{
+        if (player.bust==='true'){
+        return 
+        }
+        else {
+            return player.score
+        }
+    })
+    console.log(Math.max(under21Scores.toString()))
+}
+
+let getWinningScore1=(arr)=>{
+    let under21Players= arr.filter(player=>
+        player.bust!=='true'
+    )
+    console.log(under21Players)
 }
