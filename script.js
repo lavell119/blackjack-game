@@ -1,5 +1,5 @@
 let card= document.querySelectorAll('.card')
-let player= document.querySelectorAll('.player')
+let playerElement= document.querySelectorAll('.player')
 let seat= document.querySelectorAll('.seat')
 let testButton = document.querySelector('.test-button')
 let stayButton= document.querySelectorAll('.stay-btn')
@@ -16,6 +16,7 @@ class Player {
         this.score = score;
         this.name = name;
         this.position = position;
+        this.bust = false
     }
 }
 
@@ -64,6 +65,9 @@ hitButton.forEach (button=> {
     console.log(plyr.score)
     console.log(plyr)
     console.log(score)
+    if(score>21){
+        bust(i)
+    }
     })
 }
     )
@@ -163,3 +167,9 @@ let getWinner=(num)=>{
 }
 
 getWinner(20)
+
+let bust = (i)=>{
+    hitButton[i].classList.add('hide')
+    players[i].bust=true
+    console.log(players[i])
+}
