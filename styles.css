@@ -140,6 +140,10 @@ body {
     text-align: center;
 }
 
+.win {
+    border: 2px solid green;
+}
+
 .hide {
     display: none;
 }

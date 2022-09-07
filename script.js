@@ -11,6 +11,7 @@ let winner= document.querySelector('.winner')
 let score=0
 let winnerPlayer=''
 let under21Players=[]
+let winningPlayer=''
 
 class Player {
     constructor(name, score, position) {
@@ -84,6 +85,7 @@ stayButton.forEach((button)=>{
 let i =0
 let nextTurn =()=>{
     if (i===3) {
+        seat[i].classList.remove('active')
         winner.classList.remove('hide')
         displayWinner()
         /*getUnder21Players(players)
@@ -93,6 +95,9 @@ let nextTurn =()=>{
         getUnder21Scores(scores) 
         let highScore=Math.max(...under21Scores)
         console.log(highScore)
+        getWinningPlayer(highScore)
+        let p=winningPlayer.position
+        seat[p].classList.add('win')
     } else {
     seat[i].classList.remove('active')
     seat[i+1].classList.add('active')
@@ -234,3 +239,17 @@ let getHighestScore=(scores)=>{
 getHighestScore(under21Scores)
 
 console.log(Math.max(...under21Scores))
+
+let getWinningPlayer=(score)=>{
+    players.forEach(player=>{
+        if (player.score===score){
+            player.winner='true'
+            console.log(player.name)
+            winningPlayer=player
+        } else {
+            return
+        }
+        
+        
+    })
+}
