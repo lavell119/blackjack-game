@@ -10,6 +10,7 @@ let scoreElement= document.querySelectorAll('.score')
 let winner= document.querySelector('.winner')
 let score=0
 let winnerPlayer=''
+let under21Players=[]
 
 class Player {
     constructor(name, score, position) {
@@ -75,6 +76,7 @@ hitButton.forEach (button=> {
 stayButton.forEach((button)=>{
     button.addEventListener('click',()=>{
         nextTurn()
+
     }
 )}
 )
@@ -84,7 +86,13 @@ let nextTurn =()=>{
     if (i===3) {
         winner.classList.remove('hide')
         displayWinner()
-        getWinningScore1(players)
+        /*getUnder21Players(players)
+        getUnder21PlayerScores(...under21Players)  
+        */
+        let scores=[player1.score, player2.score, player3.score, player4.score]
+        getUnder21Scores(scores) 
+        let highScore=Math.max(...under21Scores)
+        console.log(highScore)
     } else {
     seat[i].classList.remove('active')
     seat[i+1].classList.add('active')
@@ -138,8 +146,11 @@ let randomNum=(Math.floor(Math.random()*5))
  }*/
 player1.score=19
 player2.score=22
+player2.bust='true'
 player3.score=11
 player4.score=27
+player4.bust='true'
+
 let testArr=[player1, player2, player3, player4]
 
  testArr.forEach(player=>{
@@ -187,9 +198,39 @@ let getWinningScore= (arr) =>{
     console.log(Math.max(under21Scores.toString()))
 }
 
-let getWinningScore1=(arr)=>{
+let getUnder21Players=(arr)=>{
     let under21Players= arr.filter(player=>
         player.bust!=='true'
     )
     console.log(under21Players)
 }
+
+let getUnder21PlayerScores=(arr) =>{
+    let under21PlayerScores=arr.map(player=>{
+        player=player.score
+        console.log(under21PlayerScores)})
+}
+
+getUnder21Players(players)
+
+getUnder21PlayerScores
+
+let scores=[player1.score, player2.score, player3.score, player4.score]
+console.log(scores)
+
+let under21Scores
+let getUnder21Scores=(scores)=>{
+    under21Scores=scores.filter(score=>score<22)
+    console.log(under21Scores)
+
+}
+getUnder21Scores(scores)
+
+let getHighestScore=(scores)=>{
+    let highScore=Math.max(...scores)
+    console.log(highScore)
+}
+
+getHighestScore(under21Scores)
+
+console.log(Math.max(...under21Scores))

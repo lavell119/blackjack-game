@@ -1,8 +1,5 @@
-export function startGame() {
-    player.forEach(player=()=>{
-        score=0
-        console.log(score)
-    }
-)
-seat[0].classList.add('active')
+export  function getUnder21PlayerScores(arr){
+    let under21PlayerScores=arr.map(player=>{
+        player=player.score
+        console.log(under21PlayerScores)})
 }
