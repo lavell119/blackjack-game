@@ -135,7 +135,7 @@ let nextTurn =()=>{
  
 let randomNum=(Math.floor(Math.random()*5))
  let displayWinner=()=>{
-    winner.innerText=`Winner is Player ${randomNum}`
+    winner.innerText=`Winner is Player ${winningPlayer.position}`
     checkWinner()
     getWinner()
  }
@@ -149,31 +149,6 @@ let randomNum=(Math.floor(Math.random()*5))
             scores.pop()
         })
  }*/
-player1.score=19
-player2.score=22
-player2.bust='true'
-player3.score=11
-player4.score=27
-player4.bust='true'
-
-let testArr=[player1, player2, player3, player4]
-
- testArr.forEach(player=>{
-    let v = player.position
-    if (player.score>21){
-    testArr.splice(0, 3)
- }
-    
- })
-
- console.log(testArr)    
- let map=testArr.map((player)=>{
-    return player.score
- })
-
- console.log(map)
-
-console.log(Math.max(map))
 
 let getWinner=(num)=>{
     players.forEach(player=>{
@@ -183,7 +158,6 @@ let getWinner=(num)=>{
     })
 }
 
-getWinner(20)
 
 let bust = (i)=>{
     hitButton[i].classList.add('hide')
@@ -216,12 +190,6 @@ let getUnder21PlayerScores=(arr) =>{
         console.log(under21PlayerScores)})
 }
 
-getUnder21Players(players)
-
-getUnder21PlayerScores
-
-let scores=[player1.score, player2.score, player3.score, player4.score]
-console.log(scores)
 
 let under21Scores
 let getUnder21Scores=(scores)=>{
@@ -229,16 +197,13 @@ let getUnder21Scores=(scores)=>{
     console.log(under21Scores)
 
 }
-getUnder21Scores(scores)
 
 let getHighestScore=(scores)=>{
     let highScore=Math.max(...scores)
     console.log(highScore)
 }
 
-getHighestScore(under21Scores)
 
-console.log(Math.max(...under21Scores))
 
 let getWinningPlayer=(score)=>{
     players.forEach(player=>{
@@ -248,8 +213,6 @@ let getWinningPlayer=(score)=>{
             winningPlayer=player
         } else {
             return
-        }
-        
-        
+        }        
     })
 }
