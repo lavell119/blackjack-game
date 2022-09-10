@@ -131,10 +131,12 @@ let getWinner=(num)=>{
 
 
 let bust = (i)=>{
+    seat[i].classList.remove('active')
+    seat[i].classList.add('bust')
+    scoreElement[i].classList.add('red')
     hitButton[i].classList.add('hide')
     players[i].bust='true'
     console.log(players[i])
-    seat[i].classList.add('bust')
 }
 
 
