@@ -218,16 +218,23 @@ let decrement =()=>{
 
 let x=5
 let disp=()=>{
-    playAgainElement.innerText=`Next Game In ${x}`
+    if(x>0)
+    {playAgainElement.innerText=`Next Game In ${x}`
     console.log(x)
-    x=x-1}
+    x=x-1} else {
+    console.log('Count Done.')
+    clearInterval(myInterval)
+    }
+}
   
 
-
+let myInterval=setInterval(disp, 1000)
 /*setInterval(disp, 1000)*/
 
 let intervalCount=()=>{
-    setInterval(disp, 1000)
+myInterval
 }
+
+intervalCount()
 
 
