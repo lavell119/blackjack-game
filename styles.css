@@ -141,7 +141,7 @@ body {
 }
 
 .win {
-    border: 2px solid green;
+    border: 2px solid winnn;
 }
 
 .hide {
@@ -163,4 +163,15 @@ body {
     right: 3px;
     bottom: 20px;
     color: red;
+}
+
+.play-again {
+    position: absolute;
+    height: 50px;
+    width: 120px;
+    background: red;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

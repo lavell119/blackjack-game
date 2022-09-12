@@ -13,6 +13,7 @@ let winnerPlayer=''
 let under21Players=[]
 let winningPlayer=''
 let bustElement=document.querySelectorAll('.bust-ele')
+let playAgainElement= document.querySelector('.play-again')
 
 
 class Player {
@@ -94,9 +95,10 @@ let nextTurn =()=>{
         let p=winningPlayer.position
         seat[p].classList.add('win')
         btnContainer[i].classList.add('hide')
-        setTimeout(()=>{
+        /*setTimeout(()=>{
             console.log('timeout')}, 3000
-        )
+        )*/
+        setTimeout(playAgain, 3000)
     } else {
     seat[i].classList.remove('active')
     seat[i+1].classList.add('active')
@@ -198,3 +200,9 @@ let getWinningPlayer=(score)=>{
         }        
     })
 }
+
+let playAgain=(i)=>{
+    winner.classList.add('hide')
+}
+
+playAgainElement.innerText="yes"
