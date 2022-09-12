@@ -169,9 +169,13 @@ body {
     position: absolute;
     height: 50px;
     width: 120px;
-    background: red;
+    background: GREEN;
     border-radius: 5px;
     display: flex;
     align-items: center;
     justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
 }

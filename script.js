@@ -203,6 +203,31 @@ let getWinningPlayer=(score)=>{
 
 let playAgain=(i)=>{
     winner.classList.add('hide')
+    playAgainElement.innerText=`Next Game In ${intervalCount}`
+}
+let pa=()=>{
+    console.log(i)
 }
 
-playAgainElement.innerText="yes"
+let decrement =()=>{
+    for (i=5; i>=0; i--){
+            setTimeout(pa, 3000)
+}
+}
+
+
+let x=5
+let disp=()=>{
+    playAgainElement.innerText=`Next Game In ${x}`
+    console.log(x)
+    x=x-1}
+  
+
+
+/*setInterval(disp, 1000)*/
+
+let intervalCount=()=>{
+    setInterval(disp, 1000)
+}
+
+
