@@ -54,10 +54,10 @@ let startGame=()=>{
 seat[0].classList.add('active')
 }
 
-
+let i=0
 hitButton.forEach (button=> {
-    let score =0
     button.addEventListener('click', ()=>{
+    let score =players[i].score
     let e = Math.floor(Math.random() * 52)
     let drawnCard=(deck[e])
     console.log(drawnCard.name)
@@ -88,7 +88,6 @@ stayButton.forEach((button)=>{
 )
 
 
-let i =0
 let nextTurn =()=>{
     if (i===3) {
         seat[i].classList.remove('active')
@@ -282,6 +281,7 @@ let restartGame=()=>{
     seat[i].classList.add('active')
     console.log(player1.score)
     btnContainer[i].classList.remove('hide')
+    score=0
 
 }
 
