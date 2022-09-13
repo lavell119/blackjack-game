@@ -276,12 +276,10 @@ let restartGame=()=>{
         })
     scoreElement.forEach(ele=>ele.innerText='')
     players.forEach(player=>player.reset())
-    console.log(players)
-    
     seat[i].classList.add('active')
-    console.log(player1.score)
     btnContainer[i].classList.remove('hide')
-    score=0
-
+    hand.forEach(hand=>{
+        hand.innerHTML=''
+    })
 }
 
