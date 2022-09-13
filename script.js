@@ -44,6 +44,7 @@ fetch("./deck.json")
 
 
 let startGame=()=>{
+
 seat[0].classList.add('active')
 }
 
@@ -99,6 +100,15 @@ let nextTurn =()=>{
             console.log('timeout')}, 3000
         )*/
         setTimeout(playAgain, 3000)
+        startCountdown()
+        /*let myInterval=setInterval(disp, 1000) 
+
+        let intervalCount=()=>{
+        myInterval
+        }
+        intervalCount()
+*/
+
     } else {
     seat[i].classList.remove('active')
     seat[i+1].classList.add('active')
@@ -107,6 +117,8 @@ let nextTurn =()=>{
     i=i+1
     }
 }
+
+
 
 
  let checkWinner=()=>{
@@ -203,7 +215,7 @@ let getWinningPlayer=(score)=>{
 
 let playAgain=(i)=>{
     winner.classList.add('hide')
-    playAgainElement.innerText=`Next Game In ${intervalCount}`
+    playAgainElement.classList.remove('hide')
 }
 let pa=()=>{
     console.log(i)
@@ -217,24 +229,28 @@ let decrement =()=>{
 
 
 let x=5
+
 let disp=()=>{
+
     if(x>0)
     {playAgainElement.innerText=`Next Game In ${x}`
     console.log(x)
     x=x-1} else {
     console.log('Count Done.')
-    clearInterval(myInterval)
+    clearInterval(int)
     }
+}
+
+let int
+
+let clearTimer=()=>{
+    clearInterval(startCountdown)
 }
   
 
-let myInterval=setInterval(disp, 1000)
-/*setInterval(disp, 1000)*/
 
-let intervalCount=()=>{
-myInterval
+let startCountdown =()=>{
+    int=setInterval(disp, 1000)
 }
-
-intervalCount()
 
 

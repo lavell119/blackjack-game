@@ -141,12 +141,10 @@ body {
 }
 
 .win {
-    border: 2px solid winnn;
+    border: 2px solid green;
 }
 
-.hide {
-    display: none;
-}
+
 
 .bust {
     border: 2px solid red;
@@ -178,4 +176,8 @@ body {
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
+}
+
+.hide {
+    display: none;
 }
