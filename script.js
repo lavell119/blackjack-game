@@ -21,7 +21,13 @@ class Player {
         this.score = score;
         this.name = name;
         this.position = position;
-        this.bust = false
+        this.bust = false;
+    }
+        reset () {
+            this.score=0;
+            this.bust=false;
+
+        
     }
 }
 
@@ -99,7 +105,7 @@ let nextTurn =()=>{
         /*setTimeout(()=>{
             console.log('timeout')}, 3000
         )*/
-        setTimeout(playAgain, 3000)
+        setTimeout(playAgain, 2000)
         /*let myInterval=setInterval(disp, 1000) 
 
         let intervalCount=()=>{
@@ -230,16 +236,18 @@ let decrement =()=>{
 }
 
 
-let x=5
+let x=3
 
 let disp=()=>{
-
+    
     if(x>0)
     {playAgainElement.innerText=`Next Game In ${x}`
     console.log(x)
     x=x-1} else {
+    x=3
     console.log('Count Done.')
     clearInterval(int)
+    
     restartGame()
     }
 }
@@ -257,6 +265,8 @@ let startCountdown =()=>{
 }
 
 let restartGame=()=>{
+    i=0
+    playAgainElement.innerText='Loading...'
     playAgainElement.classList.add('hide')
     seat.forEach(seat=>{
         if (seat.classList.contains('win')){
@@ -265,4 +275,13 @@ let restartGame=()=>{
             seat.classList.remove('bust')
         }
         })
+    scoreElement.forEach(ele=>ele.innerText='')
+    players.forEach(player=>player.reset())
+    console.log(players)
+    
+    seat[i].classList.add('active')
+    console.log(player1.score)
+    btnContainer[i].classList.remove('hide')
+
 }
+
