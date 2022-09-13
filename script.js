@@ -100,7 +100,7 @@ let nextTurn =()=>{
             console.log('timeout')}, 3000
         )*/
         setTimeout(playAgain, 3000)
-        startCountdown()
+        setTimeout(startCountdown, 3000)
         /*let myInterval=setInterval(disp, 1000) 
 
         let intervalCount=()=>{
