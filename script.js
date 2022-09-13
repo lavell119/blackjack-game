@@ -100,7 +100,6 @@ let nextTurn =()=>{
             console.log('timeout')}, 3000
         )*/
         setTimeout(playAgain, 3000)
-        setTimeout(startCountdown, 3000)
         /*let myInterval=setInterval(disp, 1000) 
 
         let intervalCount=()=>{
@@ -216,7 +215,10 @@ let getWinningPlayer=(score)=>{
 let playAgain=(i)=>{
     winner.classList.add('hide')
     playAgainElement.classList.remove('hide')
+    startCountdown()
+
 }
+
 let pa=()=>{
     console.log(i)
 }
@@ -238,6 +240,7 @@ let disp=()=>{
     x=x-1} else {
     console.log('Count Done.')
     clearInterval(int)
+    restartGame()
     }
 }
 
@@ -253,4 +256,13 @@ let startCountdown =()=>{
     int=setInterval(disp, 1000)
 }
 
-
+let restartGame=()=>{
+    playAgainElement.classList.add('hide')
+    seat.forEach(seat=>{
+        if (seat.classList.contains('win')){
+        seat.classList.remove('win')
+        } else if (seat.classList.contains('bust')) {
+            seat.classList.remove('bust')
+        }
+        })
+}
