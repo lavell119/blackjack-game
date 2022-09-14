@@ -22,12 +22,11 @@ class Player {
         this.name = name;
         this.position = position;
         this.bust = false;
+        this.chips = 2000;
     }
         reset () {
-            this.score=0;
-            this.bust=false;
-
-        
+        this.score=0;
+        this.bust=false;        
     }
 }
 
