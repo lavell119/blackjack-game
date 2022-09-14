@@ -281,5 +281,10 @@ let restartGame=()=>{
     hand.forEach(hand=>{
         hand.innerHTML=''
     })
+    bustElement.forEach(ele=>{
+        if (!ele.classList.contains('hide')){
+            ele.classList.add('hide')
+        }
+    })
 }
 
