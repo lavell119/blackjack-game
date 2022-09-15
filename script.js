@@ -321,8 +321,8 @@ let takeChips=()=>{
 let awardChips=(p)=>{
     let chips=players[p].chips
     console.log(chips)
-    players[p].chips=chips
     chips=chips+400
-    console.log(chips)
+    players[p].chips=chips
+    console.log(players[p].chips)
     chipCount[p].innerText=chips
 }
