@@ -14,6 +14,7 @@ let under21Players=[]
 let winningPlayer=''
 let bustElement=document.querySelectorAll('.bust-ele')
 let playAgainElement= document.querySelector('.play-again')
+let chipCount=document.querySelectorAll('.chip-count')
 
 
 class Player {
@@ -98,6 +99,7 @@ let nextTurn =()=>{
         console.log(highScore)
         getWinningPlayer(highScore)
         let p=winningPlayer.position
+        awardChips(p)
         seat[p].classList.add('win')
         btnContainer[i].classList.add('hide')
         /*setTimeout(()=>{
@@ -111,7 +113,6 @@ let nextTurn =()=>{
         }
         intervalCount()
 */
-
     } else {
     seat[i].classList.remove('active')
     seat[i+1].classList.add('active')
@@ -159,6 +160,7 @@ let bust = (i)=>{
     players[i].bust='true'
     console.log(players[i])
     bustElement[i].classList.remove('hide')
+    nextTurn()
 }
 
 
@@ -276,6 +278,12 @@ let restartGame=()=>{
     scoreElement.forEach(ele=>ele.innerText='')
     players.forEach(player=>player.reset())
     seat[i].classList.add('active')
+    hitButton.forEach(button=>{
+        if (button.classList.contains('hide')){
+            button.classList.remove('hide')
+        }
+    
+    })
     btnContainer[i].classList.remove('hide')
     hand.forEach(hand=>{
         hand.innerHTML=''
@@ -285,5 +293,36 @@ let restartGame=()=>{
             ele.classList.add('hide')
         }
     })
+    takeChips()
 }
 
+
+let startZeGame=()=>{
+    setTimeout(()=>{
+        seat[0].classList.add('active')
+        btnContainer[0].classList.remove('hide')
+        stayButton[0].classList.remove('hide')
+        takeChips()
+    }, 2000)
+}
+
+startZeGame()
+
+let takeChips=()=>{
+    players.forEach(player=>{
+        let z=players.indexOf(player)
+        console.log(z)
+        player.chips=player.chips-100
+        console.log(player.chips)
+        chipCount[z].innerText=player.chips            
+    })
+}
+
+let awardChips=(p)=>{
+    let chips=players[p].chips
+    console.log(chips)
+    players[p].chips=chips
+    chips=chips+400
+    console.log(chips)
+    chipCount[p].innerText=chips
+}

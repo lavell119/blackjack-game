@@ -35,6 +35,7 @@ body {
 
 .seat.active {
     border: 2px solid blue;
+    transition: .5s;
 }
 
 .hand {
@@ -82,6 +83,7 @@ body {
     background: red;
 }
 
+
 .btn-container {
     position: absolute;
     padding:10px;
@@ -91,8 +93,15 @@ body {
     justify-content: space-between;
 }
 
+.btn-container {
+    display: flex;
+    transition: 1s;
+}
+
 .hit-btn {
     background: rgb(40, 156, 40);
+    transition: 2s;
+
 }
 
 .stay-btn {
