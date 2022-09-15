@@ -294,6 +294,11 @@ let restartGame=()=>{
         }
     })
     takeChips()
+    scoreElement.forEach(ele=>{
+        if(ele.classList.contains('red')){
+            ele.classList.remove('red')
+        }
+    })
 }
 
 
@@ -312,7 +317,7 @@ let takeChips=()=>{
     players.forEach(player=>{
         let z=players.indexOf(player)
         console.log(z)
-        player.chips=player.chips-100
+        player.chips=player.chips-50
         console.log(player.chips)
         chipCount[z].innerText=player.chips            
     })
@@ -321,7 +326,7 @@ let takeChips=()=>{
 let awardChips=(p)=>{
     let chips=players[p].chips
     console.log(chips)
-    chips=chips+400
+    chips=chips+200
     players[p].chips=chips
     console.log(players[p].chips)
     chipCount[p].innerText=chips
