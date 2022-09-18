@@ -15,6 +15,9 @@ let winningPlayer=''
 let bustElement=document.querySelectorAll('.bust-ele')
 let playAgainElement= document.querySelector('.play-again')
 let chipCount=document.querySelectorAll('.chip-count')
+let chipDeduction=document.querySelectorAll('.chip-deduction')
+let chipAddition=document.querySelectorAll('.chip-addition')
+
 
 
 class Player {
@@ -319,7 +322,8 @@ let takeChips=()=>{
         console.log(z)
         player.chips=player.chips-50
         console.log(player.chips)
-        chipCount[z].innerText=player.chips            
+        chipCount[z].innerText=player.chips 
+        chipDeduct()           
     })
 }
 
@@ -330,4 +334,16 @@ let awardChips=(p)=>{
     players[p].chips=chips
     console.log(players[p].chips)
     chipCount[p].innerText=chips
+}
+
+let chipAdd=()=>{
+    chipAddition.forEach(ele=>{
+        ele.classList.remove('hide')
+    })
+}
+
+let chipDeduct=()=>{
+    chipDeduction.forEach(ele=>{
+        ele.classList.remove('hide')
+    })
 }

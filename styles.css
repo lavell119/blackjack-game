@@ -65,6 +65,7 @@ body {
     bottom: 15px; 
     font-weight: 799;
 }
+
 .card {
     height: 100px;
     background-color: white;
@@ -188,4 +189,18 @@ body {
 
 .hide {
     display: none;
+}
+
+.chip-deduction {
+    position: absolute;
+    color: red;
+    bottom: 0px; 
+    font-size: 14px;
+}
+
+.chip-addition {
+    position: absolute;
+    color: green;
+    bottom: 0px; 
+    font-size: 14px;
 }
