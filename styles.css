@@ -191,12 +191,17 @@ body {
     display: none;
 }
 
+
+
 .chip-deduction {
     position: absolute;
     color: red;
     bottom: 0px; 
+    opacity:.8;
     font-size: 14px;
 }
+
+
 
 .chip-addition {
     position: absolute;

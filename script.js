@@ -334,13 +334,14 @@ let awardChips=(p)=>{
     players[p].chips=chips
     console.log(players[p].chips)
     chipCount[p].innerText=chips
+    chipAdd(p)
 }
 
-let chipAdd=()=>{
-    chipAddition.forEach(ele=>{
-        ele.classList.remove('hide')
-    })
-    
+let chipAdd=(p)=>{
+    let u=chipAddition[p]
+    u.classList.remove('hide')
+    setTimeout(()=>{
+        u.classList.add('hide')}, 2500)
 }
 
 let chipDeduct=()=>{
