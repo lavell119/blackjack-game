@@ -340,10 +340,15 @@ let chipAdd=()=>{
     chipAddition.forEach(ele=>{
         ele.classList.remove('hide')
     })
+    
 }
 
 let chipDeduct=()=>{
     chipDeduction.forEach(ele=>{
         ele.classList.remove('hide')
     })
+    setTimeout(()=>{
+        chipDeduction.forEach(ele=>{
+            ele.classList.add('hide')
+        })}, 1000)
 }
