@@ -320,7 +320,7 @@ let takeChips=()=>{
     players.forEach(player=>{
         let z=players.indexOf(player)
         console.log(z)
-        player.chips=player.chips-50
+        player.chips=player.chips-55
         console.log(player.chips)
         chipCount[z].innerText=player.chips 
         chipDeduct()           
@@ -341,15 +341,18 @@ let chipAdd=(p)=>{
     let u=chipAddition[p]
     u.classList.remove('hide')
     setTimeout(()=>{
-        u.classList.add('hide')}, 2500)
+        u.classList.add('hide')}, 5100)
 }
-
+[]
 let chipDeduct=()=>{
     chipDeduction.forEach(ele=>{
         ele.classList.remove('hide')
+        ele.classList.add('bold')
     })
+
     setTimeout(()=>{
         chipDeduction.forEach(ele=>{
             ele.classList.add('hide')
+            ele.classList.remove('bold')
         })}, 1000)
 }

@@ -63,7 +63,7 @@ body {
     position: absolute;
     color: gold;
     bottom: 15px; 
-    font-weight: 799;
+   
 }
 
 .card {
@@ -157,7 +157,7 @@ body {
 
 
 .bust {
-    border: 2px solid red;
+    border: 1px solid red;
 }
 
 .red {
@@ -166,11 +166,12 @@ body {
 
 .bust-ele {
     position: absolute;
-    padding: 1px;
-    border: 1px solid red;
-    right: 3px;
-    bottom: 20px;
-    color: red;
+    padding: 4px;
+    border: 2px solid red;
+    color: white;
+    font-weight: bold;
+    background: red;
+    opacity: .7;
 }
 
 .play-again {
@@ -182,7 +183,6 @@ body {
     align-items: center;
     justify-content: center;
     color: white;
-    font-weight: bold;
     font-size: 15px;
     cursor: pointer;
 }
@@ -196,8 +196,10 @@ body {
 .chip-deduction {
     position: absolute;
     color: red;
-    bottom: 0px; 
-    opacity:.8;
+    bottom: 16px; 
+    right: 57px;
+    font-weight: bold;
+    opacity: .8;
     font-size: 14px;
 }
 
@@ -206,6 +208,12 @@ body {
 .chip-addition {
     position: absolute;
     color: green;
-    bottom: 0px; 
+    bottom: 16px; 
+    right: 47px;
+    font-weight: bold;
     font-size: 14px;
+}
+
+.bold {
+    font-weight: bold;
 }
