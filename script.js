@@ -18,6 +18,7 @@ let chipCount=document.querySelectorAll('.chip-count')
 let chipDeduction=document.querySelectorAll('.chip-deduction')
 let chipAddition=document.querySelectorAll('.chip-addition')
 let bustText=document.querySelectorAll('.bust-text')
+let numberOfCards=52
 
 
 
@@ -62,8 +63,11 @@ let i=0
 hitButton.forEach (button=> {
     button.addEventListener('click', ()=>{
     let score =players[i].score
-    let e = Math.floor(Math.random() * 52)
+    let e = Math.floor(Math.random() * numberOfCards)
     let drawnCard=(deck[e])
+    numberOfCards=numberOfCards-1
+    deck.splice(e, 1)
+    console.log(deck)
     console.log(drawnCard.name)
     score=score+drawnCard.value
     let newCard=document.createElement('div')
@@ -309,6 +313,14 @@ let restartGame=()=>{
             ele.classList.remove('red')
         }
     })
+    fetch("./deck.json")
+.then(response=>{
+    return response.json()
+})
+.then(data=>deck=data)
+.then(deck=>console.log(deck))   
+
+numberOfCards=52
 }
 
 

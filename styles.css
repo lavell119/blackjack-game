@@ -172,7 +172,7 @@ body {
     color: black;
     font-weight: bold;
     background: red;
-    opacity: .3;
+    opacity: .2;
     border-radius: 10px;
     height: 100%;
     width: 100%;
@@ -181,11 +181,15 @@ body {
 .bust-text {
     position: absolute;
     color: red;
-    font-size: 30px;
+    font-size: 22px;
     font-weight: bold;
     text-shadow: 10px;
     background: black;
     padding: 5px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .play-again {
