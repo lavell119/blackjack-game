@@ -17,6 +17,7 @@ let playAgainElement= document.querySelector('.play-again')
 let chipCount=document.querySelectorAll('.chip-count')
 let chipDeduction=document.querySelectorAll('.chip-deduction')
 let chipAddition=document.querySelectorAll('.chip-addition')
+let bustText=document.querySelectorAll('.bust-text')
 
 
 
@@ -163,6 +164,7 @@ let bust = (i)=>{
     players[i].bust='true'
     console.log(players[i])
     bustElement[i].classList.remove('hide')
+    bustText[i].classList.remove('hide')
     nextTurn()
 }
 
@@ -296,6 +298,11 @@ let restartGame=()=>{
             ele.classList.add('hide')
         }
     })
+    bustText.forEach(ele=>{
+        if (!ele.classList.contains('hide')){
+            ele.classList.add('hide')
+        }
+    })
     takeChips()
     scoreElement.forEach(ele=>{
         if(ele.classList.contains('red')){
@@ -320,7 +327,7 @@ let takeChips=()=>{
     players.forEach(player=>{
         let z=players.indexOf(player)
         console.log(z)
-        player.chips=player.chips-55
+        player.chips=player.chips-75
         console.log(player.chips)
         chipCount[z].innerText=player.chips 
         chipDeduct()           
@@ -330,7 +337,7 @@ let takeChips=()=>{
 let awardChips=(p)=>{
     let chips=players[p].chips
     console.log(chips)
-    chips=chips+200
+    chips=chips+300
     players[p].chips=chips
     console.log(players[p].chips)
     chipCount[p].innerText=chips
@@ -354,5 +361,5 @@ let chipDeduct=()=>{
         chipDeduction.forEach(ele=>{
             ele.classList.add('hide')
             ele.classList.remove('bold')
-        })}, 1000)
+        })}, 3000)
 }

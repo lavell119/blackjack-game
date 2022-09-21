@@ -148,6 +148,7 @@ body {
     margin: auto;
     text-align: center;
     color: white;
+ 
 }
 
 .win {
@@ -168,10 +169,23 @@ body {
     position: absolute;
     padding: 4px;
     border: 2px solid red;
-    color: white;
+    color: black;
     font-weight: bold;
     background: red;
-    opacity: .7;
+    opacity: .3;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+.bust-text {
+    position: absolute;
+    color: red;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 10px;
+    background: black;
+    padding: 5px;
 }
 
 .play-again {
@@ -208,7 +222,7 @@ body {
 .chip-addition {
     position: absolute;
     color: green;
-    bottom: 16px; 
+    bottom: 15px; 
     right: 47px;
     font-weight: bold;
     font-size: 14px;
