@@ -244,6 +244,7 @@ body {
     justify-content: center;
     gap: 10px;
     color: white;
+    position: relative;
 }
 
 #login input {
@@ -256,4 +257,25 @@ body {
     height: auto;
     position: absolute;
     top: 30px;
+}
+
+.login-btns {
+    position: absolute;
+    bottom: 35px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.login-btns button {
+    padding: 5px;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-btns button:hover {
+    border: 2px solid blue;
+    transition: .5s;
 }
