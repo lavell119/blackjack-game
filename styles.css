@@ -269,13 +269,22 @@ body {
 }
 
 .login-btns button {
-    padding: 5px;
+    padding: 8px;
     background: white;
     font-weight: bold;
     cursor: pointer;
+    color: white;
 }
 
 .login-btns button:hover {
-    border: 2px solid blue;
+    border: 2px solid white;
     transition: .5s;
+}
+
+#login-btn {
+    background: blue;
+}
+
+#create-account-btn {
+    background: green;
 }
