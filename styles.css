@@ -235,3 +235,25 @@ body {
 .bold {
     font-weight: bold;
 }
+
+#login {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+}
+
+#login input {
+    height: 29px;
+    padding-left: 8px;
+}
+
+#logo {
+    width: 190px;
+    height: auto;
+    position: absolute;
+    top: 30px;
+}

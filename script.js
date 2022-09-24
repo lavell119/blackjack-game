@@ -318,9 +318,10 @@ let restartGame=()=>{
     return response.json()
 })
 .then(data=>deck=data)
-.then(deck=>console.log(deck))   
+.then(deck=>console.log(deck)) 
 
 numberOfCards=52
+
 }
 
 
