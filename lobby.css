@@ -137,10 +137,11 @@ body {
 .lobby-seat {
     background: black;
     border-radius: 100px;
+    border: 2px solid rgb(53, 53, 53)
 }
 
 .white {
-    border: 5px solid rgb(80, 80, 80);
+    background: rgb(110, 110, 110);
 }
 
 .table-info {
@@ -178,3 +179,18 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.observe-button {
+    position: absolute;
+    background: rgb(99, 99, 99);
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    border-radius: 5px;
+    bottom: 10px;
+    color: white;
+    cursor: pointer;
+}
+
