@@ -288,8 +288,55 @@ body {
     background: blue;
 }
 
-#create-account-btn {
+.create-account-btn {
     background: green;
     font-size: 13px;
 }
 
+.create-account-form {
+    display: flex;
+    background: rgb(56, 56, 56);
+    height: 380px;
+    width: 470px;
+    border-radius: 13px;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.create-account-popup {
+    position: absolute;
+    z-index: 11;
+}
+
+.table-row {
+    color: white;
+    height: 30px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.create-account-form-labels {
+    width: 50%;
+    height: 160px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.input-fields {
+    height: 160px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.input-fields input {
+    width: 90%;
+    height: 30px;
+}

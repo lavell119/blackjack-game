@@ -6,10 +6,45 @@
 	<meta http-quiv="X-UA Compatible" content="ie-edge">
 	<title>Login</title>
 	<link href="styles.css" rel="stylesheet">
-	<script src="script.js" defer></script>
+	<script src="login.js" defer></script>
 </head>
 <body>  
 </body>
+<div class="create-account-popup hide">
+    <div class="create-account-form">
+        <div class="create-account-form-labels">
+            <div class="table-row">
+                <text>* Nickname:</text>
+            </div>
+            <div class="table-row">
+                <text>* Password:</text>
+            </div>
+            <div class="table-row">
+                <text>* Confirm Password:</text>
+            </div>
+            <div class="table-row">
+                <text>* Email:</text>
+            </div>
+        </div>
+        <div class="input-fields">
+            <div class="table-row">
+                <input>
+            </div>
+            <div class="table-row">
+                
+                <input>
+            </div>
+            <div class="table-row">
+                <input>
+            </div>
+            <div class="table-row">
+                <input>
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
 <img id="logo" src="blackjack-logo.png">
     <form id="login">
         <label>Username</label>
@@ -20,9 +55,9 @@
             <button id="login-btn">
                 LOGIN
             </button>
-            <button id="create-account-btn">
+            <div class="create-account-btn">
                 CREATE ACCOUNT
-            </button>
+            </div>
         </div>
     </form>
 </body>
