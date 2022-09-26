@@ -12,13 +12,7 @@
 </body>
 <div class="create-account-popup hide">
     <div class="create-account-popup-title">Create Account</div>
-    <div class="create-account-popup-submit-button-row">
-        <div class="popup-button submit-button">SUBMIT</div>
-        <div class="popup-button popup-cancel-button">CANCEL</div>
-
-    </div>
-
-    <div class="create-account-form">
+    <form class="create-account-form">   
         <div class="create-account-form-labels">
             <div class="table-row">
                 <text>* Nickname:</text>
@@ -35,22 +29,26 @@
         </div>
         <div class="input-fields">
             <div class="table-row">
-                <input>
+                <input name="nickname" class="nick-name">
+            </div>
+            <div class="table-row">       
+                <input name="password">
             </div>
             <div class="table-row">
-                
-                <input>
+                <input name="confirm-password">
             </div>
             <div class="table-row">
-                <input>
-            </div>
-            <div class="table-row">
-                <input>
+                <input name="email">
             </div>
             
         </div>
+        <div class="create-account-popup-submit-button-row">
+            <button class="popup-button submit-button" type="submit">SUBMIT
+            </button>
+            <div class="popup-button popup-cancel-button">CANCEL</div>
+        </div> 
         
-    </div>
+    </form>
 </div>
 <img id="logo" src="blackjack-logo.png">
     <form id="login">
