@@ -333,17 +333,35 @@ a {
     align-items: center;
 }
 
-#change-password-form {
+.change-password-form {
     font-size: 17px;
     width: 590px;
     height: 160px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .table-row input {
     height: 70%;
-    width: 440px;
+    width: 100%;
     margin-left: 14px;
 }
+
+#change-password-btn {
+    height: 40px;
+    width: 120px;
+    background: rgb(66, 66, 66);
+    color: white;
+}
+
+.button-row {
+    justify-content: center ;
+}
+
+.change-password-form-labels {
+    width: 30%;
+}
+
+.input-fields {
+    width: 70%;
+}
+
