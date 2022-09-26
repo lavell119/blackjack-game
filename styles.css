@@ -121,9 +121,7 @@ body {
     justify-content: center;
 }
 
-.hide {
-    display: none;
-}
+
 
 .score {
     height: 40px;
@@ -381,4 +379,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.password-incorrect {
+    position: absolute;
+    height: 40px;
+    width: 200px;
+    color: rgb(236, 27, 27);
+    top: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 14px;
+}
+
+.hide {
+    display: none;
 }

@@ -15,6 +15,8 @@ let userDB=[{nickname:"alan", password:"smith"}]
 let loginForm=document.querySelector('#login')
 let usernameLogin=document.querySelector('.username-login')
 let passwordLogin=document.querySelector('.password-login')
+let userNameText=document.querySelector('.lobby-user-name')
+let passwordIncorrect=document.querySelector('.password-incorrect')
 
 
 
@@ -60,8 +62,10 @@ loginForm.addEventListener('submit', (e)=>{
     let password=passwordLogin.value
     for (x=0; x<userDB.length; x++) {
         if (username===userDB[x].nickname&&password===userDB[x].password){
-            console.log("logged in")
             userLogin()
+        } else {
+            passwordIncorrect.classList.remove('hide')
+
         }
     }
 }
