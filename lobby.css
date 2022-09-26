@@ -90,13 +90,13 @@ body {
 
 .seperator-strip {
     width: 100%;
-    height: 36px;
+    height: 32px;
     background: rgb(29, 29, 29);
 }
 
 .tables-header-strip {
     background: rgb(48, 48, 48);
-    height: 32px;
+    height: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -187,7 +187,7 @@ body {
 
 .observe-button {
     position: absolute;
-    background: rgb(99, 99, 99);
+    background: green;
     height: 30px;
     display: flex;
     align-items: center;
@@ -232,6 +232,9 @@ a {
 
 .middle-third {
     height: 69%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
 }
 
 .bottom-third {
@@ -241,7 +244,106 @@ a {
 
 .sidebar {
     height: 100%;
-    width: 220px;
+    width: 15%;
     background: black;    
+    color: white;
+    border-right: 1px solid rgb(61, 61, 61);
+
 }
 
+.sidebar-ele {
+    border-bottom: 1px solid rgb(61, 61, 61);
+    height: 45px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+.sidebar-ele:hover {
+    background-color: rgb(36, 36, 36);
+}
+
+.account-information {
+    width: 100%;
+    height: 100%;
+    padding: 8px 25px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.widget {
+    width: 520px;
+    height: 70px;
+    margin-top: 8px;
+    display: flex;
+
+    align-items: center;
+    border-radius: 11px;
+    justify-content: center;
+    gap: 32px;
+    background: black;
+    border: 1px solid rgb(88, 88, 88);
+    font-size: 14px;
+}
+
+.personal-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
+.change-password {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    height: 100%;
+    width: 100%;
+}
+
+#change-password-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.display {
+    width: 100%;
+    height: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.table-row {
+    display: flex;
+    height: 33%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#change-password-form {
+    font-size: 17px;
+    width: 590px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.table-row input {
+    height: 70%;
+    width: 440px;
+    margin-left: 14px;
+}

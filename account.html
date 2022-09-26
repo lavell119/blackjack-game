@@ -7,7 +7,7 @@
 	<title>Account</title>
 	<link href="styles.css" rel="stylesheet">
     <link href="lobby.css" rel="stylesheet">
-	<script src="script.js" defer></script>
+	<script src="account.js" defer></script>
 </head>
 <body>
     <div class="top-third">
@@ -50,8 +50,59 @@
     </div>
     <div class="middle-third">
         <div class="sidebar">
-            
+            <div class="sidebar-ele ai">Account Information</div>
+            <div class="sidebar-ele cp">Change Password</div>
+            <div class="sidebar-ele as">Account Security</div>
+            <div class="sidebar-ele ce">Change E-mail</div>
+            <div class="sidebar-ele ca">Change Avatar</div>
         </div>
+        <div class="display">
+            <div class="display-element account-information">
+                <div class="personal-info">
+                    <h4>Personal Info</h4>
+                    <div class="widget">
+                        <div class="personal-info-text bold">
+                            <div class="nick-key">Nick:</div>
+                            <div class="email-key">Email:</div>
+                        </div>
+                        <div class="personal-info-text">
+                            <div class="nick-key">Username</div>
+                            <div class="email-key">superman@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="personal-info">
+                    <h4>Account Status</h4>
+                    <div class="widget">
+                        <div class="personal-info-text bold">
+                            <div class="nick-key">Nick:</div>
+                            <div class="email-key">Email:</div>
+                        </div>
+                        <div class="personal-info-text">
+                            <div class="nick-key">Username</div>
+                            <div class="email-key">superman@gmail.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="display-element change-password hide">
+                <div id="change-password-form">
+                    <div class="table-row">
+                        <label>Old Password:</label>
+                        <input>
+                    </div>
+                    <div class="table-row">
+                        <label>New Password:</label>
+                        <input>
+                    </div>
+                    <div class="table-row">
+                        <label>Confirm Password:</label>
+                        <input>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </div>
     </div>
     <div class="bottom-third">
 
